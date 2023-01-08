@@ -9,12 +9,12 @@ interface Props {
    // getName: (name: string) => string;   // function that returns a string and passes an argument that is a string
 }
 
-export function Person(props: Props) {
+export function Person({name, email, age}: Props) {  //destructure prop arguments
     return (
         <div>
-            <h1>{props.name}</h1>
-            <h1>{props.email}</h1>
-            <h1>{props.age}</h1>
+            <h1>{name}</h1>
+            <h1>{email}</h1>
+            <h1>{age}</h1>
         </div>
     )
 
