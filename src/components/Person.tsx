@@ -1,4 +1,4 @@
-import * as React from  'react';
+import {FC} from 'react';
 
 //You give types to props in a component through the interface.
 //An interface is a way to describe an obj.
@@ -9,7 +9,7 @@ interface Props {
    // getName: (name: string) => string;   // function that returns a string and passes an argument that is a string
 }
 
-export function Person({name, email, age}: Props) {  //destructure prop arguments
+export const Person: FC<Props> =({name, age, email}) => {  //destructure prop arguments
     return (
         <div>
             <h1>{name}</h1>
